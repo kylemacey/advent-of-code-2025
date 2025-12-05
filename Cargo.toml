@@ -1,7 +1,6 @@
 [workspace]
 resolver = "2"
 
-# Days will be auto-discovered with glob pattern (uncomment after creating first day)
 members = ["day*", "scaffold"]
 
 [workspace.package]
