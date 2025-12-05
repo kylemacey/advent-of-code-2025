@@ -1,0 +1,10 @@
+[package]
+name = "day02"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
+fancy-regex = "0.16.2"
+itertools.workspace = true
+regex = "1.11"
