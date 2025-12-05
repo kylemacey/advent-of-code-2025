@@ -1,0 +1,24 @@
+# Rust build artifacts
+/target/
+**/target/
+Cargo.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Advent of Code inputs and problems (don't share these per AOC rules!)
+**/input.txt
+**/problem*.md
+day*/problem*.md
+day*/input.txt
+
+# Environment variables
+.env
+
+# OS
+.DS_Store
+Thumbs.db

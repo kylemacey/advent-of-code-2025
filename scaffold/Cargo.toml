@@ -1,0 +1,16 @@
+[package]
+name = "scaffold"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[[bin]]
+name = "scaffold"
+path = "src/main.rs"
+
+[dependencies]
+reqwest.workspace = true
+scraper.workspace = true
+chrono.workspace = true
+anyhow.workspace = true
+

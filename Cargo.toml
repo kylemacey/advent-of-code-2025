@@ -1,0 +1,23 @@
+[workspace]
+resolver = "2"
+
+# Days will be auto-discovered with glob pattern (uncomment after creating first day)
+members = ["day*", "scaffold"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Kyle Macey"]
+
+[workspace.dependencies]
+# Common dependencies for Advent of Code
+itertools = "0.13"
+regex = "1.11"
+nom = "7.1"
+rayon = "1.10"
+
+# Scaffold tool dependencies
+reqwest = { version = "0.12", features = ["blocking", "cookies"] }
+scraper = "0.20"
+chrono = "0.4"
+anyhow = "1.0"

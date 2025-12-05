@@ -1,0 +1,40 @@
+#!/bin/bash
+# Quick helper script for Advent of Code tasks
+
+case "$1" in
+    new|scaffold)
+        shift
+        cargo run --quiet --bin scaffold "$@"
+        ;;
+    run)
+        shift
+        day=${1:-01}
+        cargo run --bin "day$(printf "%02d" "$day")"
+        ;;
+    test)
+        shift
+        day=${1:-01}
+        cargo test --bin "day$(printf "%02d" "$day")"
+        ;;
+    release)
+        shift
+        day=${1:-01}
+        cargo run --release --bin "day$(printf "%02d" "$day")"
+        ;;
+    *)
+        echo "🎄 Advent of Code Helper"
+        echo ""
+        echo "Usage:"
+        echo "  ./aoc new [day]       Scaffold a new day (defaults to today)"
+        echo "  ./aoc run [day]       Run a day's solution"
+        echo "  ./aoc test [day]      Run tests for a day"
+        echo "  ./aoc release [day]   Run with optimizations"
+        echo ""
+        echo "Examples:"
+        echo "  ./aoc new            # Scaffold today"
+        echo "  ./aoc new 5          # Scaffold day 5"
+        echo "  ./aoc run 3          # Run day 3"
+        echo "  ./aoc test 3         # Test day 3"
+        ;;
+esac
+
