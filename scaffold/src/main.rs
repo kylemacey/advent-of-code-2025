@@ -295,9 +295,10 @@ fn main() -> Result<()> {
         write_cargo_toml(&dir, day)?;
         write_main_rs(&dir, day)?;
 
+        // We don't need to do this because we match all dirs with a splat
         // Update workspace Cargo.toml
-        println!("📝 Updating workspace Cargo.toml...");
-        update_workspace_members(day)?;
+        // println!("📝 Updating workspace Cargo.toml...");
+        // update_workspace_members(day)?;
 
         dir
     } else {
